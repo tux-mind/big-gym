@@ -84,6 +84,7 @@ GEM
       activesupport (>= 4.1.0)
     haml (4.0.6)
       tilt
+    high_voltage (2.3.0)
     i18n (0.7.0)
     jquery-rails (4.0.3)
       rails-dom-testing (~> 1.0)
@@ -231,6 +232,7 @@ DEPENDENCIES
   database_cleaner
   debugger
   factory_girl_rails
+  high_voltage
   paperclip
   paperclip-ffmpeg
   rails (= 4.2.1)
