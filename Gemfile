@@ -14,6 +14,13 @@ gem 'coffee-rails', '~> 4.1.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Use bower to manage client-side packages
+gem 'bower-rails'
+
+# Use paperclip to manage attachments
+gem 'paperclip'
+gem 'paperclip-ffmpeg'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -26,5 +33,15 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Give a nice frontend to add models instances
+  gem 'rails_admin'
+  
+  # test all the things!
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
 
