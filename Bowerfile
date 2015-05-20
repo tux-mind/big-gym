@@ -1,1 +1,4 @@
 asset 'bootswatch'
+asset 'angular'
+asset 'angular-route'
+asset 'angular-strap'
