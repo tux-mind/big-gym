@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'sprockets', '2.12.3'
+
 # Use bower to manage client-side packages
 gem 'bower-rails'
 
@@ -23,6 +25,9 @@ gem 'paperclip-ffmpeg'
 
 # Use high_voltage to serve static pages
 gem 'high_voltage'
+
+# Send AngularJS Templates once, saving HTTP requests
+gem 'angular-rails-templates'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -47,4 +52,3 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'selenium-webdriver'
 end
-
