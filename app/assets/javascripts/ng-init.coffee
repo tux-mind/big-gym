@@ -1,1 +1,1 @@
-@bigGym = angular.module('bigGym', ['ngRoute', 'templates'])
+@bigGym = angular.module('bigGym', ['ngRoute', 'ngAnimate', 'templates'])
