@@ -120,6 +120,8 @@ GEM
     paperclip-ffmpeg (1.2.0)
       paperclip (>= 2.5.2)
       rails
+    rabl (0.11.6)
+      activesupport (>= 2.3.14)
     rack (1.6.1)
     rack-pjax (0.8.0)
       nokogiri (~> 1.5)
@@ -244,6 +246,7 @@ DEPENDENCIES
   high_voltage
   paperclip
   paperclip-ffmpeg
+  rabl
   rails (= 4.2.1)
   rails_admin
   rspec-rails

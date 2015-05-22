@@ -19,6 +19,9 @@ gem 'sprockets', '2.12.3'
 # Use bower to manage client-side packages
 gem 'bower-rails'
 
+# Use RABL for our APIs
+gem 'rabl'
+
 # Use paperclip to manage attachments
 gem 'paperclip'
 gem 'paperclip-ffmpeg'
