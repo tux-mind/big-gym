@@ -1,8 +1,8 @@
 class Course < ActiveRecord::Base
-  belongs_to :Category
-  belongs_to :Room
-  has_many :Schedules
-  has_many :Instructors, through: :Schedules
+  belongs_to :category, inverse_of: :courses
+  belongs_to :room, inverse_of: :courses
+  has_many :schedules, inverse_of: :course
+  has_many :instructors, through: :schedules
   
   has_attached_file :image, :styles => {
     :medium => "300x300>",

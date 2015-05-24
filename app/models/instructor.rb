@@ -1,8 +1,8 @@
 class Instructor < ActiveRecord::Base
-  has_many :Schedules
-  has_many :Awards
-  has_many :Courses, through: :Schedules
-  has_many :Categories, through: :Courses
+  has_many :schedules, inverse_of: :instructor
+  has_many :awards, inverse_of: :instructor
+  has_many :courses, through: :schedules
+  has_many :categories, through: :courses
   
   has_attached_file :image, :styles => {
     :medium => "300x300>",

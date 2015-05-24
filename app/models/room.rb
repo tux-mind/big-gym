@@ -1,5 +1,6 @@
 class Room < ActiveRecord::Base
-  has_many :RoomImages
+  has_many :images, class_name: "RoomImage", inverse_of: :room
+  has_many :courses, inverse_of: :room
   
   has_attached_file :image, :styles => {
     :medium => "300x300>",

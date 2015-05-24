@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150521225536) do
+ActiveRecord::Schema.define(version: 20150524153254) do
 
   create_table "awards", force: :cascade do |t|
     t.string   "name"
@@ -20,12 +20,12 @@ ActiveRecord::Schema.define(version: 20150521225536) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.integer  "Instructor_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "instructor_id"
   end
 
-  add_index "awards", ["Instructor_id"], name: "index_awards_on_Instructor_id"
+  add_index "awards", ["instructor_id"], name: "index_awards_on_instructor_id"
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -45,14 +45,14 @@ ActiveRecord::Schema.define(version: 20150521225536) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.integer  "Category_id"
-    t.integer  "Room_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "category_id"
+    t.integer  "room_id"
   end
 
-  add_index "courses", ["Category_id"], name: "index_courses_on_Category_id"
-  add_index "courses", ["Room_id"], name: "index_courses_on_Room_id"
+  add_index "courses", ["category_id"], name: "index_courses_on_category_id"
+  add_index "courses", ["room_id"], name: "index_courses_on_room_id"
 
   create_table "instructors", force: :cascade do |t|
     t.string   "name"
@@ -73,12 +73,12 @@ ActiveRecord::Schema.define(version: 20150521225536) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.integer  "Room_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "room_id"
   end
 
-  add_index "room_images", ["Room_id"], name: "index_room_images_on_Room_id"
+  add_index "room_images", ["room_id"], name: "index_room_images_on_room_id"
 
   create_table "rooms", force: :cascade do |t|
     t.string   "name"
@@ -95,14 +95,14 @@ ActiveRecord::Schema.define(version: 20150521225536) do
     t.integer  "dow"
     t.time     "from"
     t.time     "to"
-    t.integer  "Course_id"
-    t.integer  "Instructor_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "course_id"
+    t.integer  "instructor_id"
   end
 
-  add_index "schedules", ["Course_id"], name: "index_schedules_on_Course_id"
-  add_index "schedules", ["Instructor_id"], name: "index_schedules_on_Instructor_id"
+  add_index "schedules", ["course_id"], name: "index_schedules_on_course_id"
+  add_index "schedules", ["instructor_id"], name: "index_schedules_on_instructor_id"
 
   create_table "testimonials", force: :cascade do |t|
     t.string   "name"

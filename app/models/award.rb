@@ -1,5 +1,5 @@
 class Award < ActiveRecord::Base
-  belongs_to :Instructor
+  belongs_to :instructor, inverse_of: :awards
   
   has_attached_file :image, :styles => {
     :medium => "300x300>",

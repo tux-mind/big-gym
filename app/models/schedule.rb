@@ -1,4 +1,4 @@
 class Schedule < ActiveRecord::Base
-  belongs_to :Course
-  belongs_to :Instructor
+  belongs_to :course, inverse_of: :schedules
+  belongs_to :instructor, inverse_of: :schedules
 end

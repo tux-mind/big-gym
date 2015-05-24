@@ -1,5 +1,5 @@
 class RoomImage < ActiveRecord::Base
-  belongs_to :Room
+  belongs_to :room, inverse_of: :images
   
   has_attached_file :image, :styles => {
     :medium => "300x300>",
