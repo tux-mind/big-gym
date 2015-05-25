@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150525221851) do
+ActiveRecord::Schema.define(version: 20150525223159) do
 
   create_table "awards", force: :cascade do |t|
     t.string   "name"
@@ -123,6 +123,10 @@ ActiveRecord::Schema.define(version: 20150525221851) do
     t.datetime "image_updated_at"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.string   "map_file_name"
+    t.string   "map_content_type"
+    t.integer  "map_file_size"
+    t.datetime "map_updated_at"
   end
 
   create_table "schedules", force: :cascade do |t|
