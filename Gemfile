@@ -24,7 +24,7 @@ gem 'rabl'
 
 # Use paperclip to manage attachments
 gem 'paperclip'
-gem 'paperclip-ffmpeg'
+gem 'paperclip-av-transcoder'
 
 # Use high_voltage to serve static pages
 gem 'high_voltage'
