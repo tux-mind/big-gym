@@ -1,4 +1,4 @@
-class ChangeCapitalFk < ActiveRecord::Migration
+class ChangeCapitalReferenceNames < ActiveRecord::Migration
   def self.up
     remove_reference :awards, :Instructor, index: true
     add_reference :awards, :instructor, index: true
