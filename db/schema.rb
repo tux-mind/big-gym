@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150525220423) do
+ActiveRecord::Schema.define(version: 20150525221851) do
 
   create_table "awards", force: :cascade do |t|
     t.string   "name"
@@ -50,6 +50,17 @@ ActiveRecord::Schema.define(version: 20150525220423) do
   end
 
   add_index "category_images", ["category_id"], name: "index_category_images_on_category_id"
+
+  create_table "course_images", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "course_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string   "name"
