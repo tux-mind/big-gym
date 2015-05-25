@@ -1,5 +1,5 @@
 class CourseImage < ActiveRecord::Base
-  belongs_to: :course, inverse_of: :images
+  belongs_to :course, inverse_of: :images
   
   has_attached_file :image, :styles => {
     :medium => "300x300>",
