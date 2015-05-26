@@ -1,5 +1,8 @@
-class CategoryImage < ActiveRecord::Base
+class Image < ActiveRecord::Base
   belongs_to :category, inverse_of: :images
+  belongs_to :course, inverse_of: :images
+  belongs_to :room, inverse_of: :images
+  belongs_to :instructor, inverse_of: :images
   
   has_attached_file :image, :styles => {
     :medium => "300x300>",

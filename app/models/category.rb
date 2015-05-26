@@ -1,7 +1,7 @@
 class Category < ActiveRecord::Base
   has_many :courses, inverse_of: :category
   has_many :instructors, through: :courses
-  has_many :images, class_name: "CategoryImage", inverse_of: :category
+  has_many :images, inverse_of: :category
   
   has_attached_file :image, :styles => {
     :medium => "300x300>",

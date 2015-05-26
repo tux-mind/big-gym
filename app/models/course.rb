@@ -4,7 +4,7 @@ class Course < ActiveRecord::Base
   belongs_to :level, inverse_of: :courses
   has_many :schedules, inverse_of: :course
   has_many :instructors, through: :schedules
-  has_many :images, class_name: "CourseImage", inverse_of: :course
+  has_many :images, inverse_of: :course
   
   has_attached_file :image, :styles => {
     :medium => "300x300>",
