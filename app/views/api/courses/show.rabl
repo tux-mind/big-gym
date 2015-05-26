@@ -7,7 +7,7 @@ child(:level) {
 }
 
 child (:images) {
-  extends "images/preview"
+  extends "images/base"
 }
 
 child (:instructors) {
