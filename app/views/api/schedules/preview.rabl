@@ -1,4 +1,6 @@
-attributes :dow, :from, :to
+attributes :dow
+node(:from) { |s| s.from.strftime("%T") }
+node(:to) { |s| s.to.strftime("%T") }
 child(:course) {
   attributes :id, :name
 }
