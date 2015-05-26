@@ -57,4 +57,11 @@ Rails.application.routes.draw do
   if !Rails.env.production?
     mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   end
+  
+  namespace :api do
+    resources :courses, :categories, :instructors,
+              :rooms, :levels, only: [:index, :show]
+    resources :instructor_of_the_months, :testimonials, only: [:index]
+  end
+  
 end
