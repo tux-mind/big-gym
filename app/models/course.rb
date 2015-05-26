@@ -1,6 +1,7 @@
 class Course < ActiveRecord::Base
   belongs_to :category, inverse_of: :courses
   belongs_to :room, inverse_of: :courses
+  belongs_to :level, inverse_of: :courses
   has_many :schedules, inverse_of: :course
   has_many :instructors, through: :schedules
   has_many :images, class_name: "CourseImage", inverse_of: :course

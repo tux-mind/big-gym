@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150525223159) do
+ActiveRecord::Schema.define(version: 20150526080306) do
 
   create_table "awards", force: :cascade do |t|
     t.string   "name"
@@ -73,9 +73,11 @@ ActiveRecord::Schema.define(version: 20150525223159) do
     t.datetime "updated_at",         null: false
     t.integer  "category_id"
     t.integer  "room_id"
+    t.integer  "level_id"
   end
 
   add_index "courses", ["category_id"], name: "index_courses_on_category_id"
+  add_index "courses", ["level_id"], name: "index_courses_on_level_id"
   add_index "courses", ["room_id"], name: "index_courses_on_room_id"
 
   create_table "instructor_of_the_months", force: :cascade do |t|
@@ -99,6 +101,14 @@ ActiveRecord::Schema.define(version: 20150525223159) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.text     "qualification"
+  end
+
+  create_table "levels", force: :cascade do |t|
+    t.string   "name"
+    t.string   "color"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "room_images", force: :cascade do |t|
