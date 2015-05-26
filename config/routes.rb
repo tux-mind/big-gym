@@ -61,7 +61,8 @@ Rails.application.routes.draw do
   namespace :api do
     resources :courses, :categories, :instructors,
               :rooms, :levels, only: [:index, :show]
-    resources :instructor_of_the_months, :testimonials, only: [:index]
+    resources :instructor_of_the_months, :testimonials,
+              :schedules, only: [:index]
   end
   
 end
