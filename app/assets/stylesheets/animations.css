@@ -1,0 +1,29 @@
+.ng-leave.ng-leave-active,
+.ng-enter {
+  opacity: 0;
+}
+
+.ng-enter.ng-enter-active,
+.ng-leave {
+  opacity: 1;
+}
+
+.ng-enter,
+.ng-leave {
+  -webkit-transition: 1s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -moz-transition: 1s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -ms-transition: 1s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -o-transition: 1s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  transition: 1s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+}
+
+ng-view.ng-enter,
+ng-view.ng-leave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}

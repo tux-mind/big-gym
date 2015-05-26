@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require bootswatch/paper/bootstrap
+ *= require angular-busy
  *= require_tree .
  *= require_self
  */
