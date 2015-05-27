@@ -1,6 +1,6 @@
 attributes :dow
-node(:from) { |s| s.from.strftime("%T") }
-node(:to) { |s| s.to.strftime("%T") }
+node(:from) { |s| s.from ? s.from.strftime("%H:%M") : "00:00" }
+node(:to) { |s| s.to ? s.to.strftime("%H:%M") : "00:00" }
 child(:course) {
   attributes :id, :name
 }
