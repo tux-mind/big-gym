@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150526092904) do
+ActiveRecord::Schema.define(version: 20150527005018) do
 
   create_table "awards", force: :cascade do |t|
     t.string   "name"
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 20150526092904) do
     t.integer  "instructor_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.boolean  "equipment"
   end
 
   add_index "images", ["category_id"], name: "index_images_on_category_id"
