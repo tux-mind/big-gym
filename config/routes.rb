@@ -62,7 +62,7 @@ Rails.application.routes.draw do
     resources :courses, :categories, :instructors,
               :rooms, :levels, only: [:index, :show]
     resources :instructor_of_the_months, :testimonials,
-              :schedules, only: [:index]
+              :schedules, :equipments, only: [:index]
   end
   
 end
