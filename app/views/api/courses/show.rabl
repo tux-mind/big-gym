@@ -1,5 +1,6 @@
 object @course
 attributes :name, :description
+node(:thumb) { |c| c.image.url(:medium) }
 node(:image) { |c| c.image.url }
 
 child(:level) {
