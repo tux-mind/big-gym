@@ -13,4 +13,10 @@ class Instructor < ActiveRecord::Base
   def full_name
     name + " " + surname
   end
+  
+  rails_admin do
+    object_label_method do
+      :full_name
+    end
+  end
 end
