@@ -1,0 +1,12 @@
+.container#error(ng-if="error.show" ng-switch on="error")
+  .alert.alert-dismissible(role="alert" ng-class="'alert-' + error.level")
+    %button.close(type="button" ng-click="error.show=false" aria-label="Close")
+      %span(aria-hidden="true") &times;
+    %h5 {{ error.title }}
+    %p
+      {{ error.description }}
+      Please get back to
+      %a(href="#/") Home
+      \.
+      
+      {{ error.foot }}
