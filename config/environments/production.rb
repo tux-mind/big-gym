@@ -77,3 +77,13 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
+
+require 'digest/md5'
+
+RailsAdmin.config do |config|
+  config.authorize_with do
+    authenticate_or_request_with_http_basic('BigGym administration panel') do |username, password|
+      username == 'admin' && Digest::MD5.hexdigest(password) == "5d797b4edb2a3b3bae31c3cb1fa05b8b"
+    end
+  end
+end
