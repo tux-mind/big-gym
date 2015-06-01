@@ -22,6 +22,9 @@ gem 'bower-rails'
 # Use RABL for our APIs
 gem 'rabl'
 
+# Twitter APIs
+gem 'twitter'
+
 # Use paperclip to manage attachments
 gem 'paperclip'
 gem 'paperclip-av-transcoder'

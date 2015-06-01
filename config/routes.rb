@@ -57,10 +57,15 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   
   namespace :api do
+    get 'instructors/of_the_month' => 'instructors#of_the_month'
+    get 'instructors/:id/tweets' => 'instructors#tweets'
+    
     resources :courses, :categories, :instructors,
               :rooms, :levels, only: [:index, :show]
     resources :instructor_of_the_months, :testimonials,
               :schedules, :equipments, :spaces, only: [:index]
+    
+    
   end
   
 end
