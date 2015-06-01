@@ -1,7 +1,8 @@
 object @instructor
-attributes :name, :description, :qualification
+attributes :name, :description, :qualification, :tw_username
 node(:full_name) { |i| i.full_name }
 node(:image) { |i| i.image.url }
+node(:thumb) { |i| i.image.url(:medium) }
 child(:courses) {
   extends "courses/preview"
 }
