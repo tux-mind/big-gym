@@ -38,6 +38,9 @@ gem 'angular-rails-templates'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Give a nice frontend to add models instances
+gem 'rails_admin'
+
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'debugger'
@@ -46,10 +49,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-
-  # Give a nice frontend to add models instances
-  gem 'rails_admin'
+  gem 'spring'  
   
   # test all the things!
   gem 'rspec-rails'
