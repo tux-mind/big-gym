@@ -1,0 +1,9 @@
+.container
+  %ul(ng-model="schedules" ng-if="schedules")
+    %li(ng-repeat="s in schedules")
+      from {{ s.from }} to {{ s.to }} course
+      %a(ng-href="#/courses/{{s.course.id }}")
+        {{ s.course.name }}
+      by
+      %a(ng-href="#/instructors/{{s.instructor.id}}")
+        {{ s.instructor.full_name }}

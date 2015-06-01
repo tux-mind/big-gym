@@ -1,0 +1,6 @@
+.container
+  %p Lorem Ipsum dolor...
+  %ul(ng-model="equipments" ng-if="equipments")
+    %li(ng-repeat="e in equipments")
+      %a(ng-href="{{ e.image }}")
+        %img(ng-src="{{e.thumb}}")

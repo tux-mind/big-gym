@@ -1,0 +1,8 @@
+.media(ng-repeat="c in courses" ng-href="#/courses/{{i.id}}")
+  .media-left
+    %a(ng-href="#/courses/{{i.id}}")
+      %img.media-object.img-circle(ng-src="{{c.image}}" ng-attr-alt="{{c.name}}")
+  .media-body
+    %h4.media-heading
+      {{ c.name }}
+    {{ c.summary }}

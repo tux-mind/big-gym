@@ -1,0 +1,5 @@
+.col-xs-6.col-md-3(ng-repeat="r in rooms")
+  %a.thumbnail(ng-href="#/rooms/{{r.id}}")
+    %img(ng-src="{{r.image}}")
+  .caption
+    {{ r.name }}

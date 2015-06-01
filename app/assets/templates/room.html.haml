@@ -1,0 +1,18 @@
+.container
+  %h2.text-center {{ room.name }}
+  .col-sm-4.col-sm-push-8
+    %a(ng-href="{{room.image}}")
+      %img(ng-src="{{room.thumb}}")
+    %a(ng-href="{{room.map_full}}")
+      %img(ng-src="{{room.map}}")
+    %p
+  .col-sm-8.col-sm-pull-4
+    %p {{ room.description }}
+    %p
+    .col-md-6(ng-if="courses.length")
+      %h3 Courses
+      %ng-include(src="'courses_list.html'")
+    .col-md-12(ng-if="images.length")
+      %h3 Images
+      %ng-include(src="'images.html'")
+    

@@ -1,0 +1,31 @@
+.container
+  %h2.text-center {{ instructor.full_name }}
+  .row
+    .col-sm-4.col-sm-push-8
+      %a(ng-href="{{instructor.image}}")
+        %img.center-block(ng-src="{{instructor.thumb}}")
+    .col-sm-8.col-sm-pull-4
+      %p {{ instructor.description }}
+  .row
+    .col-sm-8
+      .col-sm-6(ng-if="instructor.qualification")
+        %h3 qualification
+        %p {{ instructor.qualification }}
+      .col-sm-6(ng-if="courses.length")
+        %h3 Courses
+        %ng-include(src="'courses_list.html'")
+      .col-sm-6(ng-if="categories.length")
+        %h3 Categories
+        %ng-include(src="'categories_list.html'")
+      .col-sm-6(ng-if="rooms.length")
+        %h3 Rooms
+        %ng-include(src="'rooms_list.html'")
+      .col-sm-6(ng-if="awards.length")
+        %h3 Awards
+        %ng-include(src="'awards_list.html'")
+      .col-sm-12(ng-if="images.length")
+        %h3 Images
+        %ng-include(src="'images.html'")
+    .col-md-4(ng-if="tweets.length")
+      %h3 Tweets
+      %ng-include(src="'tweets.html'")

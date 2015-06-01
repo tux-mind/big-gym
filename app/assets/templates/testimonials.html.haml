@@ -1,0 +1,6 @@
+.container
+  %ul(ng-model="testimonials" ng-if="testimonials")
+    %li(ng-repeat="t in testimonials")
+      {{ t.name }}
+      %video(width="300" height="300" controls ng-attr-poster="{{t.thumb}}")
+        %source(ng-src="{{t.video}}")

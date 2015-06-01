@@ -1,0 +1,7 @@
+.col-xs-6.col-md-3(ng-repeat-start="i in images")
+  %a.thumbnail(ng-href="{{i.image}}")
+    %img(ng-src="{{i.thumb}}")
+  .caption
+    {{ i.name }}
+.clearfix(ng-if="!(($index + 1) % 4)")
+.clearfix.visible-xs-block(ng-if="!(($index + 3) % 4)" ng-repeat-end)

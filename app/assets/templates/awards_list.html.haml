@@ -1,0 +1,8 @@
+.media(ng-repeat="a in awards")
+  .media-left
+    %a(ng-href="{{a.image}}")
+      %img.media-object.img-circle(ng-src="{{a.thumb}}" ng-attr-alt="{{a.name}}")
+  .media-body
+    %h4.media-heading
+      {{ a.name }}
+    {{ a.description }}

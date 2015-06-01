@@ -1,0 +1,4 @@
+.container
+  %ul
+    %li(ng-repeat="c in categories")
+      %a(ng-href="#/categories/{{ c.id }}") {{ c.name }}
