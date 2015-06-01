@@ -6,4 +6,10 @@ class Api::InstructorsController < ApplicationController
   def show
     @instructor = Instructor.find(params[:id])
   end
+  
+  def of_the_month
+    @instructors = InstructorOfTheMonth.all.map do |i|
+      i.instructor
+    end
+  end
 end
