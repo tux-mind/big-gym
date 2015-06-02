@@ -1,4 +1,4 @@
-@bigGym.service('ErrorService', ($rootScope) ->
+@bigGym.service('ErrorService', ['$rootScope', ($rootScope) ->
   @onHttpError = (status) ->
     error = {
       title: 'An error occurred'
@@ -14,4 +14,4 @@
         error.title = 'Cannot fetch some content!'
     $rootScope.error = error
   return @
-)
+])

@@ -4,4 +4,4 @@
   templateUrl: 'busy.html',
   delay: 300,
   minDuration: 700
-});
+})

@@ -1,4 +1,4 @@
-@bigGym.config(($routeProvider) -> 
+@bigGym.config(['$routeProvider', ($routeProvider) -> 
   $routeProvider
   .when('/', {
     templateUrl: 'home.html'
@@ -66,4 +66,5 @@
   })
   .otherwise({
     redirectTo: '/'
-  }))
+  })
+])

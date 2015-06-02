@@ -1,4 +1,5 @@
-@bigGym.controller('ScheduleController', ($scope, ApiService)->
-  ApiService.getSchedules().success((data) ->
-                                  $scope.schedules = data)
-)
+@bigGym.controller('ScheduleController',
+  ['$scope', 'ApiService', ($scope, ApiService)->
+    ApiService.getSchedules().success((data) ->
+                                    $scope.schedules = data)
+])

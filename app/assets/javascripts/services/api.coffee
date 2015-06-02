@@ -1,4 +1,4 @@
-@bigGym.service('ApiService', ($rootScope, $http) ->
+@bigGym.service('ApiService', ['$rootScope','$http',($rootScope, $http) ->
   get = (base, id) ->
     req = $http.get('api/' + base + '/' + id)
     $rootScope.req = req
@@ -33,4 +33,4 @@
   @getTweets = (id) ->
     return $http.get('api/instructors/' + id + '/tweets')
   return @
-)
+])
