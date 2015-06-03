@@ -1,12 +1,29 @@
 .container-fluid
-  %h1.text-center there will be a carousel
+  #home-carousel.carousel.slide(data-ride="carousel")
+    %ol.carousel-indicators
+      %li.active(data-target="#home-carousel" data-slide-to="0")
+      %li(data-target="#home-carousel" data-slide-to="1")
+      %li(data-target="#home-carousel" data-slide-to="2")
+    .carousel-inner(role="listbox")
+      .item.active
+        %img(src="img/carousel0.png")
+      .item
+        %img(src="img/carousel1.png")
+      .item
+        %img(src="img/carousel2.png")
+    %a.left.carousel-control(data-target="#home-carousel" role="button" data-slide="prev")
+      %span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+      %span.sr-only Previous
+    %a.right.carousel-control(data-target="#home-carousel" role="button" data-slide="next")
+      %span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+      %span.sr-only Next
 .container
   .col-md-4
-    %h2 Headline 1
-    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    %h2 Nike
+    %p Virgin Active Nike and work every day to make you make the most of your time at the gym: try the Nike Training Club Nike or purchase products on favorable terms.
   .col-md-4
-    %h2 Headline 2
-    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    %h2 Becomes V-Trainer
+    %p Personal Trainer Virgin Active Italy is a professional wellness combining your technical background staff training going.
   .col-md-4
-    %h2 Headline 3
-    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    %h2 Beauty
+    %p The area of Beautyness is a perfect combination of beauty and fitness, a wellness and relaxing atmosphere where complete training with the care of your body.
