@@ -1,5 +1,6 @@
 .container
-  %h2.text-center {{ room.name }}
+  .page-header.text-center
+    %h1 {{ room.name }}
   .col-sm-4.col-sm-push-8
     %a(ng-href="{{room.image}}")
       %img(ng-src="{{room.thumb}}")
@@ -15,4 +16,3 @@
     .col-md-12(ng-if="images.length")
       %h3 Images
       %ng-include(src="'images.html'")
-    

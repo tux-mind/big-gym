@@ -1,5 +1,6 @@
 .container
-  %p Lorem Ipsum dolor...
+  .page-header.text-center
+    %h1 Our Equipment
   %ul(ng-model="equipments" ng-if="equipments")
     %li(ng-repeat="e in equipments")
       %a(ng-href="{{ e.image }}")

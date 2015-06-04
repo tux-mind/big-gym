@@ -1,4 +1,6 @@
 .container
+  .page-header.text-center
+    %h1 Overall Schedule
   %ul(ng-model="schedules" ng-if="schedules")
     %li(ng-repeat="s in schedules")
       from {{ s.from }} to {{ s.to }} course
@@ -7,3 +9,19 @@
       by
       %a(ng-href="#/instructors/{{s.instructor.id}}")
         {{ s.instructor.full_name }}
+
+  %table.table.table-responsive.table-bordered
+    %thead
+      %tr
+        %th Course
+        %th Sunday
+        %th Monday
+        %th Tuesday
+        %th Wednesday
+        %th Thursday
+        %th Friday
+        %th Saturday
+    %tbody
+
+
+

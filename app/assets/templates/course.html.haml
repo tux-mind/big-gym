@@ -1,12 +1,13 @@
 .container
-  %h2.text-center {{ course.name }}
+  .page-header.text-center
+    %h1 {{ course.name }}
   .col-md-8
     %p {{ course.description }}
     .col-md-6(ng-if="instructors")
       %h3 Instructors
       %ng-include(src="'instructor_list.html'")
     .col-md-6
-      %h3 Scehdules
+      %h3 Schedules
       %ul(ng-model="schedules" ng-if="schedules")
         %li(ng-repeat="s in schedules")
           from {{ s.from }} to {{ s.to }}
@@ -17,4 +18,3 @@
       Room
     %ng-include(src="'images.html'")
 
-  
