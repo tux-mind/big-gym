@@ -18,7 +18,7 @@ class Api::InstructorsController < ApplicationController
     
     raise ActionController::RoutingError.new('Not Found') if !username
     
-    timeline = Api::TW_CLIENT.user_timeline(username)
+    timeline = Api::TW_CLIENT.user_timeline(username, :count => 5)
     
     render json: timeline
   end
