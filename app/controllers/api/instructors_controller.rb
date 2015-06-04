@@ -19,8 +19,7 @@ class Api::InstructorsController < ApplicationController
     raise ActionController::RoutingError.new('Not Found') if !username
     
     timeline = Api::TW_CLIENT.user_timeline(username)
-    oembeds = Api::TW_CLIENT.oembeds(timeline)
     
-    render json: oembeds.map{|o| o.html}
+    render json: timeline
   end
 end

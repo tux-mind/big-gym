@@ -17,6 +17,7 @@
 //= require angular-animate
 //= require angular-busy
 //= require angular-rails-templates
+//= require angular-linkify
 //= require_tree ../templates
 //= require ng-init
 //= require_tree .

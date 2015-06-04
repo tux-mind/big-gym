@@ -15,8 +15,9 @@
         )
       
       ApiService.getTweets($routeParams.id).success((data) ->
-        angular.forEach(data, (html) -> 
-            @push($sce.trustAsHtml(html))
-          , $scope.tweets)
+        $scope.tweets = data
+#         angular.forEach(data, (html) -> 
+#             @push($sce.trustAsHtml(html))
+#           , $scope.tweets)
         )
 ])

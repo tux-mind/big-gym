@@ -1,10 +1,4 @@
-%div(ng-repeat="t in tweets" ng-bind-html="t")
-/ .panel.panel-default
-/   .panel-heading
-/     Tweets
-/   .panel-body
-/     %p
-/       lorem ipsum dolor
-/   .list-group
-/     .list-group-item(ng-repeat="t in tweets")
-/       {{ t.text }}
+/%div(ng-repeat="t in tweets" ng-bind-html="t")
+.panel.panel-default
+  .list-group
+    .list-group-item(ng-repeat="t in tweets" ng-bind="t.text" linkify="twitter")
