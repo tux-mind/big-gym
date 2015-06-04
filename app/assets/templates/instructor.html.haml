@@ -1,5 +1,6 @@
 .container
-  %h2.text-center {{ instructor.full_name }}
+  .page-header.text-center
+    %h1 {{ instructor.full_name }}
   .row
     .col-sm-4.col-sm-push-8
       %a(ng-href="{{instructor.image}}")
