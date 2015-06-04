@@ -1,4 +1,6 @@
 .container
+  .page-header.text-center
+    %h1 Testimonials
   %ul(ng-model="testimonials" ng-if="testimonials.length")
     %li(ng-repeat="t in testimonials")
       %h3 {{ t.name }}
