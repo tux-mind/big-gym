@@ -1,5 +1,2 @@
 .container
-  %ul(ng-model="courses" ng-if="courses")
-    %li(ng-repeat="c in courses")
-      %a(ng-href="#/courses/{{ c.id }}")
-        {{ c.name }}
+  %ng-include(src="'courses_list.html'" ng-init="item_width=6")

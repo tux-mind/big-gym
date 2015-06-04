@@ -1,4 +1,2 @@
 .container
-  %ul
-    %li(ng-repeat="c in categories")
-      %a(ng-href="#/categories/{{ c.id }}") {{ c.name }}
+  %ng-include(src="'categories_list.html'" ng-init="item_width=6")

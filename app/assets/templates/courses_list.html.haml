@@ -1,8 +1,11 @@
-.media(ng-repeat="c in courses" ng-href="#/courses/{{c.id}}")
-  .media-left
-    %a(ng-href="#/courses/{{c.id}}")
-      %img.media-object.img-circle(ng-src="{{c.image}}" ng-attr-alt="{{c.name}}")
-  .media-body
-    %h4.media-heading
-      {{ c.name }}
-    {{ c.summary }}
+%div(ng-repeat-start="c in courses" ng-class="'col-sm-' + item_width" ng-init="item_width = (item_width ? item_width : 12)")
+  .media(ng-href="#/courses/{{c.id}}")
+    .media-left.thumb
+      %a(ng-href="#/courses/{{c.id}}")
+        %img.media-object.img-circle.center-block(ng-src="{{c.image}}" ng-attr-alt="{{c.name}}")
+    .media-body
+      %h4.media-heading
+        {{ c.name }}
+      {{ c.summary }}
+  %p
+.clearfix(ng-if="(($index + 1) % (12 / item_width) ) == 0" ng-repeat-end)

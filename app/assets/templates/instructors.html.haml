@@ -1,5 +1,2 @@
 .container
-  %ul(ng-model="instructors" ng-if="instructors")
-    %li(ng-repeat="i in instructors")
-      %a(ng-href="#/instructors/{{ i.id }}")
-        {{ i.full_name }}
+  %ng-include(src="'instructor_list.html'" ng-init="item_width=6")
