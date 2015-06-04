@@ -1,6 +1,6 @@
 .container
-  %ul(ng-model="testimonials" ng-if="testimonials")
+  %ul(ng-model="testimonials" ng-if="testimonials.length")
     %li(ng-repeat="t in testimonials")
-      {{ t.name }}
-      %video(width="300" height="300" controls ng-attr-poster="{{t.thumb}}")
-        %source(ng-src="{{t.video}}")
+      %h3 {{ t.name }}
+      .embed-responsive.embed-responsive-16by9
+        %iframe(ng-src="{{ '//www.youtube.com/embed/' + t.yid  + '?rel=0'| trusted }}" allowfullscreen)
