@@ -1,8 +1,8 @@
 class Instructor < ActiveRecord::Base
   has_many :schedules, inverse_of: :instructor
   has_many :awards, inverse_of: :instructor
-  has_many :courses, through: :schedules
-  has_many :categories, through: :courses
+  has_many :courses, -> { distinct }, through: :schedules
+  has_many :categories, -> { distinct }, through: :courses
   has_many :images, inverse_of: :instructor
   
   has_attached_file :image, :styles => {

@@ -1,6 +1,6 @@
 class Category < ActiveRecord::Base
   has_many :courses, inverse_of: :category
-  has_many :instructors, through: :courses
+  has_many :instructors, -> { distinct }, through: :courses
   has_many :images, inverse_of: :category
   
   has_attached_file :image, :styles => {
