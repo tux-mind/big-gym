@@ -56,7 +56,8 @@
     controller: 'InstructorsOfTheMonthController'
   })
   .when('/where_and_contacts', {
-    templateUrl: 'where_and_contacts.html'
+    templateUrl: 'where_and_contacts.html',
+    controller: 'WhereController'
   })
   .when('/fees_and_registration', {
     templateUrl: 'fees_and_registration.html'

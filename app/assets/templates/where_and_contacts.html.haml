@@ -1,10 +1,9 @@
 .container
   .page-header.text-center
     %h1 Where and Contacts
-.container-fluid
-  %h2.text-center
-    Here you will see an awesome map :)
-    Using a fluid container you can use all the viewport
+.container
+  %ui-gmap-google-map(center='map.center' zoom='map.zoom')
+    %ui-gmap-marker(coords="marker.coords" options="marker.options" idkey="marker.id")
 .container
   .col-sm-6
     %h3.text-center Contacts
