@@ -10,7 +10,12 @@
     %li
       %a(ng-href="#/spaces/") Spaces
 
-  %ul(ng-model="equipments" ng-if="equipments")
-    %li(ng-repeat="e in equipments")
-      %a(ng-href="{{ e.image }}")
-        %img(ng-src="{{e.thumb}}")
+  .col-md-12
+    %h3 Images
+    .col-xs-6.col-md-3(ng-repeat-start="i in equipments")
+      %a.thumbnail(ng-href="{{i.image}}")
+        %img(ng-src="{{i.thumb}}")
+      .caption
+        {{ i.name }}
+    .clearfix(ng-if="!(($index + 1) % 4)")
+    .clearfix.visible-xs-block(ng-if="!(($index + 3) % 4)" ng-repeat-end)
