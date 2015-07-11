@@ -15,6 +15,8 @@
     %a(ng-href="{{course.image}}")
       %img(ng-src="{{course.thumb}}")
     %h3(ng-if="room")
-      Room
+      Held in {{ room.name }}
+      %a(ng-href="#/rooms/{{room.id}}")
+        %img(ng-src="{{room.image}}")
     %ng-include(src="'images.html'")
 
