@@ -1,11 +1,29 @@
 .container
   .page-header.text-center
     %h1 FEE's
-  %p
-    bla bla blabla bla blabla bla blabla
-    bla blabla bla blabla bla blabla bla
-    bla bla blabla bla blabla bla blabla
-    bla blabla bla blabla bla blabla bla
+  %table.table.table-responsive.table-bordered
+    %thead
+      %tr
+        %th 1 Month
+        %th 3 Month
+        %th 6 Month
+        %th 12 Month
+    %tbody
+      %tr
+        %td
+          %p 50
+        %td
+          %p 130
+        %td
+          %p 250
+        %td
+          %p 400
   .page-header.text-center
     %h1 Registration
-  %p A form...
+  %form.form-signin.col-md-6.col-md-offset-3
+    %label.sr-only(for="inputEmail") Email Address
+    %input.form-control#inputEmail(type="email" placeholder="Email Address" required autofocus)
+    %label.sr-only(for="inputPassword") Password
+    %input.form-control#inputPassword(type="password" placeholder="Password" required)
+    %button.btn.btn-lg.btn-primary.btn-block(type="submit") Register
+
