@@ -1,4 +1,32 @@
 .container
   .page-header.text-center
     %h1 Spaces
-  %ng-include(src="'images.html'")
+  #spaces-carousel.carousel.slide(data-ride="carousel")
+    %ol.carousel-indicators
+      %li.active(data-target="#spaces-carousel" data-slide-to="0")
+      %li(data-target="#spaces-carousel" data-slide-to="1")
+      %li(data-target="#spaces-carousel" data-slide-to="2")
+      %li(data-target="#spaces-carousel" data-slide-to="3")
+      %li(data-target="#spaces-carousel" data-slide-to="4")
+    .carousel-inner(role="listbox")
+      .item.active
+        %img(src="img/spaces1.jpg")
+      .item
+        %img(src="img/spaces2.jpg")
+      .item
+        %img(src="img/spaces3.jpg")
+      .item
+        %img(src="img/spaces4.jpg")
+      .item
+        %img(src="img/spaces5.jpg")
+    %a.left.carousel-control(data-target="#spaces-carousel" role="button" data-slide="prev")
+      %span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+      %span.sr-only Previous
+    %a.right.carousel-control(data-target="#spaces-carousel" role="button" data-slide="next")
+      %span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+      %span.sr-only Next
+  %h3.text-right Related:
+  %li.text-right
+    %a(ng-href="#/bio/") Phylosophy And History
+  %li.text-right
+    %a(ng-href="#/equipment/") Our Equipment
