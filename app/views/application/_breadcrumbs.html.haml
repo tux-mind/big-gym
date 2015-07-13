@@ -1,0 +1,7 @@
+.container
+  %ol.breadcrumb(ng-controller="BreadcrumbsController")
+    %li(ng-repeat="b in breadcrumbs.get() track by b.path" ng-class="{ active: $last }")
+      %a.margin-right-xs(ng-if='!$last' ng-href='\#{{ b.path }}')
+        {{ b.label }}
+      %span(ng-if="$last")
+        {{ b.label }}

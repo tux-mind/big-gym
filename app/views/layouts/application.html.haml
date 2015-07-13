@@ -1,5 +1,4 @@
 !!! html
-!!!
 %html
   %head
     %title BigGym
@@ -8,6 +7,7 @@
     = csrf_meta_tags
   %body(ng-app="bigGym")
     = render 'header'
+    = render 'breadcrumbs'
     = render 'error'
     = yield
     = render 'footer'

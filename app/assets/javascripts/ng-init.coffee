@@ -1,1 +1,1 @@
-@bigGym = angular.module('bigGym', ['ngRoute', 'cgBusy', 'ngAnimate', 'templates', 'linkify', 'uiGmapgoogle-maps'])
+@bigGym = angular.module('bigGym', ['ngRoute', 'cgBusy', 'ngAnimate', 'templates', 'linkify', 'uiGmapgoogle-maps', 'ng-breadcrumbs'])
