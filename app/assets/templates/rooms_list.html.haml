@@ -1,5 +1,8 @@
-.col-xs-6.col-md-3(ng-repeat="r in rooms")
+.col-xs-6.col-md-3(ng-repeat-start="r in rooms")
   %a.thumbnail(ng-href="#/rooms/{{r.id}}")
     %img(ng-src="{{r.image}}")
   .caption
     {{ r.name }}
+
+.clearfix.visible-xs(ng-if="(($index + 1) % 2 ) == 0")
+.clearfix.hidden-xs(ng-if="(($index + 1) % 4 ) == 0" ng-repeat-end)
