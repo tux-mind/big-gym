@@ -10,14 +10,11 @@
                     , feed)
   
   deferredFeedFetcher = (id, feed) ->
-    Facebook.login((response) ->
-      console.log('login => ' + response)
-    )
   
     Facebook.getLoginStatus((loginStatus) ->
-      console.log('loginStatus => ' + loginStatus)
+      console.log('loginStatus => ' + loginStatus.status)
       unless loginStatus.status == 'connected'
-        Facebook.login((response) ->
+        Facebook.api('/oauth/access_token?client_id=499265756900224&client_secret=b00ae07c0a37aa20288b6f44aba11f5b&grant_type=client_credentials', (response) ->
           console.log('login => ' + response)
           loggedIn = response.status == 'connected'
         ).then((res) ->
