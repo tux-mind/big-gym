@@ -25,5 +25,10 @@ module BigGymApp
     
     config.assets.enabled = true
     config.assets.paths << Rails.root.join("app", "assets", "templates")
+    
+    config.action_dispatch.default_headers = {
+      'Access-Control-Allow-Origin' => '*',
+      'Access-Control-Request-Method' => %w{GET OPTIONS}.join(",")
+    }
   end
 end

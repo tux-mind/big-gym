@@ -1,6 +1,6 @@
 @bigGym.service('ApiService', ['$rootScope','$http',($rootScope, $http) ->
   get = (base, id) ->
-    req = $http.get('api/' + base + '/' + id)
+    req = $http.get(API_SERVER + '/api/' + base + '/' + id)
     $rootScope.req = req
     return req
   
