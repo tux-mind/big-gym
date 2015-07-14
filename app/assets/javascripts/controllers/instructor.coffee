@@ -6,6 +6,8 @@
       $scope.categories = []
       $scope.awards = []
       $scope.tweets = []
+      $scope.fbFeed = []
+      
       ApiService.getInstructor($routeParams.id).success((data) ->
         $scope.instructor = data
         $scope.categories = data.categories
@@ -19,4 +21,7 @@
       ApiService.getTweets($routeParams.id).success((data) ->
         $scope.tweets = data
         )
+      
+      ApiService.getFbFeed('arnold', $scope.fbFeed)
+      
 ])

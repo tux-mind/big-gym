@@ -27,6 +27,11 @@
       .col-sm-12(ng-if="images.length")
         %h3 Images
         %ng-include(src="'images.html'")
-    .col-md-4(ng-if="tweets.length")
-      %h3 Tweets
-      %ng-include(src="'tweets.html'")
+    .col-md-4
+      %div(ng-if="tweets.length")
+        %h3 Tweets
+        %ng-include(src="'tweets.html'")
+      %div(ng-if="fbFeed.length")
+        %h3 Facebook Posts
+        
+      
