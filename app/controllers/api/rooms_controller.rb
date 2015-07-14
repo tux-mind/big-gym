@@ -1,6 +1,6 @@
 class Api::RoomsController < ApplicationController
   def index
-    @rooms = Room.all
+    @rooms = Room.all.order(:name)
   end
 
   def show

@@ -1,6 +1,6 @@
 class Api::InstructorsController < ApplicationController
   def index
-    @instructors = Instructor.all
+    @instructors = Instructor.all.order(:name)
   end
   
   def show
@@ -8,7 +8,7 @@ class Api::InstructorsController < ApplicationController
   end
   
   def of_the_month
-    @instructors = InstructorOfTheMonth.all.map do |i|
+    @instructors = InstructorOfTheMonth.all.order(:name).map do |i|
       i.instructor
     end
   end
