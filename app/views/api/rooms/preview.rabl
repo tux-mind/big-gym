@@ -1,2 +1,2 @@
 attributes :id, :name
-node(:image) { |r| r.image.url(:medium) }
+node(:image) { |r| image_url(r.image.url(:medium)) }
