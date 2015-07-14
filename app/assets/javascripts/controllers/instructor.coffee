@@ -1,6 +1,6 @@
 @bigGym.controller('InstructorController',
-  ['$scope', '$routeParams', '$sce', 'ApiService',
-    ($scope, $routeParams, $sce, ApiService)->
+  ['$scope', '$routeParams', 'ApiService',
+    ($scope, $routeParams, ApiService)->
       $scope.images = []
       $scope.courses = []
       $scope.categories = []
@@ -16,8 +16,5 @@
       
       ApiService.getTweets($routeParams.id).success((data) ->
         $scope.tweets = data
-#         angular.forEach(data, (html) -> 
-#             @push($sce.trustAsHtml(html))
-#           , $scope.tweets)
         )
 ])

@@ -31,6 +31,6 @@
   @getInstructorsOfTheMonth = () ->
     return @getInstructor('of_the_month')
   @getTweets = (id) ->
-    return $http.get('api/instructors/' + id + '/tweets')
+    return @getInstructor(id + '/tweets')
   return @
 ])
