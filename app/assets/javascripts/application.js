@@ -19,6 +19,7 @@
 //= require angular-rails-templates
 //= require angular-linkify
 //= require ng-breadcrumbs
+//= require angular-bootstrap
 //= require lodash
 //= require angular-google-maps
 //= require_tree ../templates

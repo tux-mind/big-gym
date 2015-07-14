@@ -1,4 +1,4 @@
-%div(ng-repeat-start="c in courses" ng-class="'col-sm-' + item_width" ng-init="item_width = (item_width ? item_width : 12)")
+%div(ng-repeat-start="c in courses | CoursesByLevel:level" ng-class="'col-sm-' + item_width" ng-init="item_width = (item_width ? item_width : 12)")
   .media(ng-href="#/courses/{{c.id}}")
     .media-left.thumb
       %a(ng-href="#/courses/{{c.id}}")

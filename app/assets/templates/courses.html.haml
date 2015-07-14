@@ -1,4 +1,9 @@
 .container
   .page-header.text-center
     %h1 Our Courses
+  .row.text-center
+    .btn-group
+      %label.btn.btn-primary(ng-repeat="l in levels" ng-model="$parent.level" btn-radio="l" uncheckable)
+        {{ l }}
+  %p
   %ng-include(src="'courses_list.html'" ng-init="item_width=6")
