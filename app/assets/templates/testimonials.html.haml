@@ -5,4 +5,4 @@
     %li(ng-repeat="t in testimonials")
       %h3 {{ t.name }}
       .embed-responsive.embed-responsive-16by9
-        %iframe(ng-src="{{ '//www.youtube.com/embed/' + t.yid  + '?rel=0'| trusted }}" allowfullscreen)
+        %iframe(ng-src="{{ 'https://www.youtube.com/embed/' + t.yid  + '?rel=0'| trusted }}" allowfullscreen)
