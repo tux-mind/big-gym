@@ -1,6 +1,6 @@
 @bigGym.controller('InstructorController',
-  ['$scope', '$routeParams', 'ApiService',
-    ($scope, $routeParams, ApiService)->
+  ['$scope', '$routeParams', 'ApiService', 'breadcrumbs',
+    ($scope, $routeParams, ApiService, breadcrumbs)->
       $scope.images = []
       $scope.courses = []
       $scope.categories = []
@@ -12,6 +12,8 @@
         $scope.courses = data.courses
         $scope.images = data.images
         $scope.awards = data.awards
+        
+        breadcrumbs.options = { 'Instructor' : data.full_name }
         )
       
       ApiService.getTweets($routeParams.id).success((data) ->
