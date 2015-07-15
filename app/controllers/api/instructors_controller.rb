@@ -24,4 +24,12 @@ class Api::InstructorsController < ApplicationController
     
     render json: timeline
   end
+  
+  def posts
+    username = Instructor.find(params[:id]).fb_id
+    
+    raise ActionController::RoutingError.new('Not Found') if !username
+    
+    render json: Api::FB_CLIENT.get_connections(username, "feed")[0,4]
+  end
 end

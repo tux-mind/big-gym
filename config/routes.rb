@@ -59,6 +59,7 @@ Rails.application.routes.draw do
   namespace :api do
     get 'instructors/of_the_month' => 'instructors#of_the_month'
     get 'instructors/:id/tweets' => 'instructors#tweets'
+    get 'instructors/:id/posts' => 'instructors#posts'
     
     resources :courses, :categories, :instructors,
               :rooms, :levels, only: [:index, :show]
