@@ -7,11 +7,10 @@
         %img.center-block(ng-src="{{instructor.thumb}}")
     .col-sm-8.col-sm-pull-4
       %p {{ instructor.description }}
+      %h4(ng-if="instructor.qualification") Qualification
+      %p(ng-if="instructor.qualification") {{ instructor.qualification }}
   .row
     .col-sm-8
-      .col-sm-6(ng-if="instructor.qualification")
-        %h3 qualification
-        %p {{ instructor.qualification }}
       .col-sm-6(ng-if="courses.length")
         %h3 Courses
         %ng-include(src="'courses_list.html'")
