@@ -11,22 +11,22 @@
       %p(ng-if="instructor.qualification") {{ instructor.qualification }}
   .row
     .col-sm-8
-      .col-sm-6(ng-if="courses.length")
+      .col-md-6(ng-if="courses.length")
         %h3 Courses
         %ng-include(src="'courses_list.html'")
-      .col-sm-6(ng-if="categories.length")
+      .col-md-6(ng-if="categories.length")
         %h3 Categories
         %ng-include(src="'categories_list.html'")
-      .col-sm-6(ng-if="rooms.length")
+      .col-md-6(ng-if="rooms.length")
         %h3 Rooms
         %ng-include(src="'rooms_list.html'")
-      .col-sm-6(ng-if="awards.length")
+      .col-md-6(ng-if="awards.length")
         %h3 Awards
         %ng-include(src="'awards_list.html'")
-      .col-sm-12(ng-if="images.length")
+      .col-md-12(ng-if="images.length")
         %h3 Images
         %ng-include(src="'images.html'")
-    .col-md-4
+    .col-sm-4
       %div(ng-if="tweets.length")
         %h3 Tweets
         %ng-include(src="'tweets.html'")

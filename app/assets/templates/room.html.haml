@@ -10,7 +10,7 @@
   .col-sm-8.col-sm-pull-4
     %p {{ room.description }}
     %p
-    .col-md-6(ng-if="courses.length")
+    .col-md-12(ng-if="courses.length")
       %h3 Courses
       %ng-include(src="'courses_list.html'")
     .col-md-12(ng-if="images.length")
