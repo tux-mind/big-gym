@@ -1,40 +1,8 @@
-@bigGym.service('ApiService', ['$rootScope','$http', 'Facebook', ($rootScope, $http, Facebook) ->
-                               
-  httpGet = (url) ->
-    req = $http.get(url)
+@bigGym.service('ApiService', ['$rootScope','$http', ($rootScope, $http) ->
+  get = (base, id) ->
+    req = $http.get(API_SERVER + '/api/' + base + '/' + id)
     $rootScope.req = req
     return req
-                               
-  get = (base, id) ->
-    return httpGet(API_SERVER + '/api/' + base + '/' + id)
-  
-  fbFeedReceiver = (response, feed) ->
-    angular.forEach(response, (post) ->
-                      @.push(post)
-                    , feed)
-  
-  deferredFeedFetcher = (id, feed) ->
-  
-    Facebook.getLoginStatus((loginStatus) ->
-      console.log('loginStatus => ' + loginStatus.status)
-      unless loginStatus.status == 'connected'
-        Facebook.api('/oauth/access_token?client_id=499265756900224&client_secret=b00ae07c0a37aa20288b6f44aba11f5b&grant_type=client_credentials', (response) ->
-          console.log('login => ' + response)
-          loggedIn = response.status == 'connected'
-        ).then((res) ->
-          console.log('login.then => ' + res)
-          if loggedIn
-            Facebook.api('/' + id + '/feed', (response) ->
-              console.log('feed => ' + response)
-              fbFeedReceiver(response, feed)
-            )
-        )
-      else
-        Facebook.api('/' + id + '/feed', (response) ->
-          console.log('feed => ' + response)
-          fbFeedReceiver(response, feed)
-        )
-    )
   
   @getCourse = (id) ->
     return get('courses', id)
@@ -65,6 +33,6 @@
   @getTweets = (id) ->
     return @getInstructor(id + '/tweets')
   @getFbFeed = (id) ->
-    return httpGet('https://graph.facebook.com/'+ id + '/feed?access_token=499265756900224|b00ae07c0a37aa20288b6f44aba11f5b')
+    return @getInstructor(id + '/posts')
   return @
 ])
