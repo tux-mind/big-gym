@@ -65,6 +65,6 @@
   @getTweets = (id) ->
     return @getInstructor(id + '/tweets')
   @getFbFeed = (id) ->
-    return httpGet('http://graph.facebook.com/'+ id + '/feed?access_token=499265756900224|b00ae07c0a37aa20288b6f44aba11f5b')
+    return httpGet('https://graph.facebook.com/'+ id + '/feed?access_token=499265756900224|b00ae07c0a37aa20288b6f44aba11f5b')
   return @
 ])
