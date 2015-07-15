@@ -19,7 +19,7 @@
             from {{ s.from }} to {{ s.to }}
     .col-md-4.text-center
       %h4(ng-if="room")
-        Held in {{ room.name }} room
+        Held in {{ room.name }}
       %a(ng-href="#/rooms/{{room.id}}" ng-if="room")
         %img(ng-src="{{room.image}}")
       %ng-include(src="'images.html'")
