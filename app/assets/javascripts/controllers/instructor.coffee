@@ -22,6 +22,7 @@
         $scope.tweets = data
         )
       
-      ApiService.getFbFeed('arnold', $scope.fbFeed)
-      
+      ApiService.getFbFeed('arnold').success((data) ->
+        $scope.fbFeed = data
+        )
 ])
