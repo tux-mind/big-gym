@@ -1,4 +1,4 @@
-@bigGym.service('ApiService', ['$rootScope','$http',($rootScope, $http) ->
+@bigGym.service('ApiService', ['$rootScope','$http', ($rootScope, $http) ->
   get = (base, id) ->
     req = $http.get(API_SERVER + '/api/' + base + '/' + id)
     $rootScope.req = req
@@ -32,5 +32,7 @@
     return @getInstructor('of_the_month')
   @getTweets = (id) ->
     return @getInstructor(id + '/tweets')
+  @getFbFeed = (id) ->
+    return @getInstructor(id + '/posts')
   return @
 ])

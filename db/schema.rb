@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150604132852) do
+ActiveRecord::Schema.define(version: 20150715091631) do
 
   create_table "awards", force: :cascade do |t|
     t.string   "name"
@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(version: 20150604132852) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.text     "qualification"
+    t.string   "fb_id"
   end
 
   create_table "levels", force: :cascade do |t|
@@ -138,9 +139,9 @@ ActiveRecord::Schema.define(version: 20150604132852) do
 
   create_table "testimonials", force: :cascade do |t|
     t.string   "name"
+    t.string   "yid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "yid"
   end
 
 end

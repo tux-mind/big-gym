@@ -25,6 +25,9 @@ gem 'rabl'
 # Twitter APIs
 gem 'twitter'
 
+# Facebook APIs
+gem 'koala'
+
 # Use paperclip to manage attachments
 gem 'paperclip'
 gem 'paperclip-av-transcoder'
