@@ -5,5 +5,4 @@
                                     'linkify',
                                     'uiGmapgoogle-maps',
                                     'ng-breadcrumbs',
-                                    'ui.bootstrap',
-                                    'facebook'])
+                                    'ui.bootstrap'])

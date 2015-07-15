@@ -22,7 +22,6 @@
 //= require angular-bootstrap
 //= require lodash
 //= require angular-google-maps
-//= require angular-facebook
 //= require_tree ../templates
 //= require ng-init
 //= require_tree .
